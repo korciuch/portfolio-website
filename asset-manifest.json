@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/http//korciuch.github.io/portfolio-website/static/css/main.ff5f46fa.chunk.css",
-    "main.js": "/http//korciuch.github.io/portfolio-website/static/js/main.27a492f9.chunk.js",
-    "main.js.map": "/http//korciuch.github.io/portfolio-website/static/js/main.27a492f9.chunk.js.map",
-    "runtime-main.js": "/http//korciuch.github.io/portfolio-website/static/js/runtime-main.565869c2.js",
-    "runtime-main.js.map": "/http//korciuch.github.io/portfolio-website/static/js/runtime-main.565869c2.js.map",
-    "static/js/2.9d912d35.chunk.js": "/http//korciuch.github.io/portfolio-website/static/js/2.9d912d35.chunk.js",
-    "static/js/2.9d912d35.chunk.js.map": "/http//korciuch.github.io/portfolio-website/static/js/2.9d912d35.chunk.js.map",
-    "static/js/3.25cc36f3.chunk.js": "/http//korciuch.github.io/portfolio-website/static/js/3.25cc36f3.chunk.js",
-    "static/js/3.25cc36f3.chunk.js.map": "/http//korciuch.github.io/portfolio-website/static/js/3.25cc36f3.chunk.js.map",
-    "index.html": "/http//korciuch.github.io/portfolio-website/index.html",
-    "static/css/main.ff5f46fa.chunk.css.map": "/http//korciuch.github.io/portfolio-website/static/css/main.ff5f46fa.chunk.css.map",
-    "static/js/2.9d912d35.chunk.js.LICENSE.txt": "/http//korciuch.github.io/portfolio-website/static/js/2.9d912d35.chunk.js.LICENSE.txt"
+    "main.css": "/portfolio-website/static/css/main.ff5f46fa.chunk.css",
+    "main.js": "/portfolio-website/static/js/main.65311d64.chunk.js",
+    "main.js.map": "/portfolio-website/static/js/main.65311d64.chunk.js.map",
+    "runtime-main.js": "/portfolio-website/static/js/runtime-main.2d8492bc.js",
+    "runtime-main.js.map": "/portfolio-website/static/js/runtime-main.2d8492bc.js.map",
+    "static/js/2.f8309e39.chunk.js": "/portfolio-website/static/js/2.f8309e39.chunk.js",
+    "static/js/2.f8309e39.chunk.js.map": "/portfolio-website/static/js/2.f8309e39.chunk.js.map",
+    "static/js/3.eaf88fd1.chunk.js": "/portfolio-website/static/js/3.eaf88fd1.chunk.js",
+    "static/js/3.eaf88fd1.chunk.js.map": "/portfolio-website/static/js/3.eaf88fd1.chunk.js.map",
+    "index.html": "/portfolio-website/index.html",
+    "static/css/main.ff5f46fa.chunk.css.map": "/portfolio-website/static/css/main.ff5f46fa.chunk.css.map",
+    "static/js/2.f8309e39.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.f8309e39.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.565869c2.js",
-    "static/js/2.9d912d35.chunk.js",
+    "static/js/runtime-main.2d8492bc.js",
+    "static/js/2.f8309e39.chunk.js",
     "static/css/main.ff5f46fa.chunk.css",
-    "static/js/main.27a492f9.chunk.js"
+    "static/js/main.65311d64.chunk.js"
   ]
 }
