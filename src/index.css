@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.notch-top-left {
+  clip-path: 
+    polygon(
+      0% 20px, 
+      20px 0%, 
+      calc(100% - 20px) 0%, 
+      100% 20px, 
+      100% calc(100% - 20px), 
+      calc(100% - 20px) 100%, 
+      20px 100%, 
+      0% calc(100% - 20px)
+    );
+}
+
+
+/* html {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+} */
