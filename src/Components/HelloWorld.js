@@ -4,22 +4,24 @@ import MySpacer from './MySpacer.js'
 import '../index.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 
 const HelloWorld = () => {
 
     const resizeLargeHeader = useBreakpointValue({
-        base: "3xl", 
+        base: "lg", 
         lg: "3xl",
         md:"2xl",
-        sm: "lg"
+        sm: "lg",
+        xs: "lg"
     })
     const resizeSubHeader = useBreakpointValue({
-        base: "2xl",
+        base: "md",
         lg: "xl",
         md: "lg",
-        sm: "md"
+        sm: "md",
+        xs: "md"
     })
 
     const socials = [{
@@ -31,6 +33,16 @@ const HelloWorld = () => {
         name: 'LinkedIn',
         icon: faLinkedin,
         link: 'https://www.linkedin.com/in/kyleorciuch/'
+    },
+    {
+        name: 'Instagram',
+        icon: faInstagram,
+        link: 'https://www.instagram.com/kyle.orciuch/?hl=en'
+    },
+    {
+        name: 'Twitter',
+        icon: faTwitter,
+        link: 'https://twitter.com/kyle9883?lang=en'
     }
 ]
 
@@ -90,34 +102,57 @@ const HelloWorld = () => {
                     colSpan={[1, 2]}
                     p="5px"
                 >
+                    <Heading
+                        size="sm"
+                        paddingBottom="10px"
+                    >
+                        Background
+                    </Heading>
                     <Text
                         paddingBottom="10px"
                     >
-                        Hello! I'm Kyle Orciuch, a highly motivated and dedicated varsity student-athlete at 
+                        Hello! I'm Kyle Orciuch, a dedicated varsity student-athlete at 
                         Stanford University who is seeking a software engineering internship 
                         for summer 2021. My experience as an elite athlete has taught me that 
-                        the greatest challenges cannot be solved without teamwork. 
-                        Thus, I know what it is like to be a team-player, and a leader when necessary. 
-                        My undergraduate CS career at Stanford so far has given me a strong command of C, 
-                        C++, and Python, and my major track is Artificial Intelligence. 
+                        the greatest challenges cannot be solved without teamwork, as we know that the ball
+                        always moves faster than the individual. Thus, I know what it is like to be a 
+                        team-player, and a leader when necessary. My undergraduate CS career at Stanford 
+                        so far has given me a strong command of systems programming in C/C++ and data
+                        science in Python. My major track is Artificial Intelligence.
                     </Text>
+                    <Heading
+                        size="sm"
+                        paddingBottom="10px"
+                    >
+                        Career Objectives
+                    </Heading>
                     <Text
                         paddingBottom="10px"
                     >
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        It has survived not only five centuries, but also the leap into electronic typesetting, 
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
-                        sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
-                        like Aldus PageMaker including versions of Lorem Ipsum.
+                        Because I am a member of the varsity men's soccer team at Stanford, I have
+                        a unique opportunity to experiment with the worlds of professional sports
+                        and Silicon Valley. Therefore, if my playing career allows it, my intention
+                        is to become a professional soccer player. However, I will be putting equal
+                        attention to my career readiness as a aspriring ML/data science researcher. My
+                        ultimate goal is to gain a foothold into tech leadership as a senior project
+                        manager.
                     </Text>
+                    <Heading
+                        size="sm"
+                        paddingBottom="10px"
+                    >
+                        What am I doing now?
+                    </Heading>
                     <Text
                         paddingBottom="10px"
                     >
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-                        Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced 
-                        in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        I have used my winter break to apply for summer 2021 internships and also
+                        to build my own portfolio website from scratch using React.js and ChakraUI.
+                        Moreover, I am entering the winter quarter signed up for ENGR 108 (Introduction 
+                        to Matrix Methods) and CS 161 (Design and Analysis of Algorithms), which I see
+                        as important (and exciting!) stepping stones for my upcoming AI/ML classes. Finally,
+                        I'm ramping up my training as our team prepares for the 2021 spring season (stay
+                        tuned for the PAC-12 TV schedule)! 
                     </Text>
                 </GridItem>
                 <GridItem 

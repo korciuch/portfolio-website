@@ -1,5 +1,21 @@
 import React, { useState } from 'react'
-import { Box, Center, Text, Stack, UnorderedList, ListItem } from '@chakra-ui/react'
+import { Box,
+    Center,
+    Text, Stack,
+    UnorderedList, 
+    ListItem,
+    Drawer,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    DrawerHeader,
+    DrawerBody,
+    Heading,
+    DrawerFooter,
+    Button,
+    useDisclosure
+    
+} from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { useTransition, animated } from 'react-spring'
 import {
@@ -10,34 +26,83 @@ import {
   } from 'react-router-dom';
 
 function Navigation(){
-    const [showMenu, setShowMenu] = useState(false)
+    const { isOpen, onOpen, onClose } = useDisclosure()
 
-    const maskTransitions = useTransition(showMenu, null, {
-        from: { position: 'absolute', opacity: 0 },
-        enter: { opacity: 1 },
-        leave: { opacity: 0 },
-    })
+    // const maskTransitions = useTransition(showMenu, null, {
+    //     from: { position: 'absolute', opacity: 0 },
+    //     enter: { opacity: 1 },
+    //     leave: { opacity: 0 },
+    // })
 
-    const menuTransitions = useTransition(showMenu, null, {
-        from: { opacity: 0, transform: 'translateX(-100%)' },
-        enter: { opacity: 1, transform: 'translateX(0%)'},
-        leave: { opacity: 0, transform: 'translateX(-100%)' },
-    })
+    // const menuTransitions = useTransition(showMenu, null, {
+    //     from: { opacity: 0, transform: 'translateX(-100%)' },
+    //     enter: { opacity: 1, transform: 'translateX(0%)'},
+    //     leave: { opacity: 0, transform: 'translateX(-100%)' },
+    // })
 
     return (
         <Box
             as="button"
             color="black"
-            //bg="gray.400"
             fontSize="2em"
+            display={['flex', 'none']}
         >
             <Center>
                 <HamburgerIcon
-                    onClick={() => setShowMenu(!showMenu)}
+                    onClick={onOpen}
                 />
             </Center>
+            <Drawer
+                isOpen={isOpen}
+                placement="right"
+                onClose={onClose}
+            >
+                <DrawerOverlay>
+                <DrawerContent>
+                    <DrawerCloseButton />
+                    <DrawerHeader>Menu</DrawerHeader>
 
-            {
+                    <DrawerBody>
+                    <Stack
+                        letterSpacing="2px"
+                    >
+                        <Link
+                            to="/"
+                            onClick={onClose}
+                        >
+                            <Heading size="md">
+                                <Text>Home</Text>
+                            </Heading>
+                        </Link>
+                        <Link
+                            to="/about"
+                            onClick={onClose}
+                        >
+                            <Heading size="md">
+                                <Text>About</Text>
+                            </Heading>
+                        </Link>
+                        <Link
+                            to="/projects"
+                            onClick={onClose}
+                        >
+                            <Heading size="md">
+                                <Text>Projects</Text>
+                            </Heading>
+                        </Link>
+                    </Stack>
+                    </DrawerBody>
+
+                    <DrawerFooter>
+                    <Button variant="outline" mr={3} onClick={onClose}>
+                        Close
+                    </Button>
+                    </DrawerFooter>
+                </DrawerContent>
+                </DrawerOverlay>
+            </Drawer>
+
+            {/* {
                 maskTransitions.map(({ item, key, props }) =>
                 item && 
                 <animated.div 
@@ -101,11 +166,19 @@ function Navigation(){
                                 <Text color="blue.600">About</Text>
                             </Link>
                             </ListItem>
+                            <ListItem p="5">
+                            <Link 
+                                to="/projects"
+                                onClick={() => setShowMenu(false)}
+                            >
+                                <Text color="blue.600">Projects</Text>
+                            </Link>
+                            </ListItem>
                         </UnorderedList>
                     </Stack>
                 </animated.div>
                 )
-            }
+            } */}
         </Box>
     )
 }

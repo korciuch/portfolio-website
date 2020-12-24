@@ -2,6 +2,8 @@ import React from 'react'
 import HelloWorld from './Components/HelloWorld';
 import Header from './Components/Header';
 import Footer from './Components/Footer'
+import About from './Components/About'
+import Projects from './Components/Projects'
 import { Stack, Text } from '@chakra-ui/react';
 import {
   BrowserRouter as Router,
@@ -22,7 +24,10 @@ function App() {
             <HelloWorld name='Kyle'/> 
           </Route>
           <Route path="/about">
-            <Text p="5px">About me</Text>
+            <About />
+          </Route>
+          <Route path="/projects">
+            <Projects />
           </Route>
         </Switch>
 
