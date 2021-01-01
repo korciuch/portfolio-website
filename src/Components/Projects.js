@@ -38,6 +38,7 @@ const Projects = () => {
                             style={cb} 
                             language={language} 
                             children={value} 
+                            wrapLongLines={false} 
                         />
                     </Flex>
         },

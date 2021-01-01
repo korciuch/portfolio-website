@@ -29,6 +29,7 @@ const About = () => {
                             style={cb} 
                             language={language} 
                             children={value} 
+                            wrapLongLines={false} 
                         />
                     </Flex>
         },
