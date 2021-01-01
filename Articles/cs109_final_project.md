@@ -1,6 +1,6 @@
 # Conditional Expectation of 4x4 Boggle
 ### By Kyle Orciuch & Max Lau
-![Header Image](./Images/demo-graph.png)
+![Demo Graph](./Images/demo-graph.png)
 
 ### Introduction
 
@@ -263,7 +263,7 @@ plotting...
 (close pop-up window when done to continue)
 ```
 
-![Header Image](./Images/usage-graph.png)
+![Usage Graph](./Images/usage-graph.png)
 
 ### Results
 
@@ -341,4 +341,4 @@ plot
 plotting... 
 ```
 
-![Header Image](./Images/conclusion-graph.png)
+![Conclusion Graph](./Images/conclusion-graph.png)
