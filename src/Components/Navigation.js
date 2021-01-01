@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Box,
     Center,
     Text, Stack,
-    UnorderedList, 
-    ListItem,
     Drawer,
     DrawerOverlay,
     DrawerContent,
@@ -17,11 +15,7 @@ import { Box,
     
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { useTransition, animated } from 'react-spring'
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link
   } from 'react-router-dom';
 

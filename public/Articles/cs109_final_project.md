@@ -4,13 +4,13 @@
 
 ### Introduction
 
-Given that a Boggle board has the condition where i.e. {{'a': 1}, {'b': 0}, … , {'y': 0}, {'z': 1} is the dice-face character frequency map, what is the conditional expected score based on 650k+ Boggle game simulations? We&#39;ll start by explaining how we randomly set up the board for each simulated game, and then we'll show how we generated our simulated data. The following list of 16 uppercase strings represents the 6-sided dice that will be randomly shuffled:
+Given that a Boggle board has the condition where i.e. \{\{'a': 1}, \{'b': 0\}, … , \{'y': 0\}, \{'z': 1\}\} is the dice-face character frequency map, what is the conditional expected score based on 650k+ Boggle game simulations? We&#39;ll start by explaining how we randomly set up the board for each simulated game, and then we'll show how we generated our simulated data. The following list of 16 uppercase strings represents the 6-sided dice that will be randomly shuffled:
 
 > #### cubes = [&#39;AAEEGN&#39;, &#39;ABBJOO&#39;, &#39;ACHOPS&#39;, &#39;AFFKPS&#39;, &#39;AOOTTW&#39;, &#39;CIMOTU&#39;, &#39;DEILRX&#39;, &#39;DELRVY&#39;, &#39;DISTTY&#39;, &#39;EEGHNW&#39;, &#39;EEINSU&#39;, &#39;EHRTVW&#39;, &#39;EIOSST&#39;, &#39;ELRTTY&#39;, &#39;HIMNQU&#39;, &#39;HLNNRZ&#39;]
 
 We will assume that the 16 dice can be placed into each grid position with equal probability (0.0625) and that the random selection of each die face will occur with equal probability as well (0.167). The board is represented as a 4x4 two dimensional array that looks like this:
 
-> #### {{O, O, O, S}, {R, R, E, T}, {M, T, C, L}, {N, E, S, E}}
+> #### \{\{O, O, O, S\}, \{R, R, E, T\}, \{M, T, C, L\}, \{N, E, S, E\}\}
 
 After the board has been randomly generated, we call our recursive backtracking function to conduct a depth-first search to exhaustively find all possible words that are greater or equal to length 3 and are found in the provided dictionary. Any 'scratch' substrings that are not dictionary prefixes are pruned in the base case to increase efficiency. My gameplay code is in a private repo because that part is a previous CS 106B assignment (available upon request). Here is a snippet of a log file, log_kyle1.txt: 
 
@@ -305,7 +305,7 @@ def export_to_csv(parsed_data):
 
 ### Conclusion
 
-The expected value for most of the distributions we encountered were shaped like right-tailed Poisson; however, once we started probing into high scoring boards where the sample size decreased significantly, the distributions looked like normal bell curves. One of the key observations is the fact that only 5 letters experienced increases in expected board score during some interval when their frequency increased: \{a, e, r, s, t\}. From this list, only the vowel 'e' managed to post a second increase in expected score when encountered on a board three times - the others, {a, r, s, t}, only increased on the interval [1, 2].  The remaining alphabet decreased expected score with increasing frequency for the interval [1, 6], and posted lower expected scores on all intervals comparing to those of the above set. In conclusion, if you want the greatest chance of getting a high scoring board, you'll want a board of which contains the frequency argmax of each of the 'high-rollers' \{a, e, r, s, t\}, which we can demonstrate using our python program. 
+The expected value for most of the distributions we encountered were shaped like right-tailed Poisson; however, once we started probing into high scoring boards where the sample size decreased significantly, the distributions looked like normal bell curves. One of the key observations is the fact that only 5 letters experienced increases in expected board score during some interval when their frequency increased: \{a, e, r, s, t\}. From this list, only the vowel 'e' managed to post a second increase in expected score when encountered on a board three times - the others, \{a, r, s, t\}, only increased on the interval \[1, 2\].  The remaining alphabet decreased expected score with increasing frequency for the interval \[1, 6\], and posted lower expected scores on all intervals comparing to those of the above set. In conclusion, if you want the greatest chance of getting a high scoring board, you'll want a board of which contains the frequency argmax of each of the 'high-rollers' \{a, e, r, s, t\}, which we can demonstrate using our python program. 
 
 ```
 ***********************************

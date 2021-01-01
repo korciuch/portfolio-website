@@ -1,6 +1,5 @@
 import React, { useEffect, useState }from 'react';
-import { Document, Page } from 'react-pdf';
-import { Heading, Stack, Text, Image, Grid, GridItem, Center, UnorderedList, ListItem, useBreakpointValue, Link, ExternalLinkIcon, Flex} from '@chakra-ui/react';
+import { Heading, Text, Image, Center, Flex} from '@chakra-ui/react';
 import MySpacer from './MySpacer.js'
 import '../index.css'
 import ReactMarkdown from 'react-markdown'
@@ -84,8 +83,8 @@ const Projects = () => {
         },
         link: p => {
             console.log(p)
-            return (p.node.children[0].value == "iframe" ? 
-            <Center><iframe iframe width="100%" height="700px"  src={p.href}/></Center>
+            return (p.node.children[0].value === "iframe" ? 
+            <Center><iframe iframe width="100%" height="700px" title="google-sheet-embed"  src={p.href}/></Center>
             : 
             <a children={p.children} href={p.node.url}/>)
         }

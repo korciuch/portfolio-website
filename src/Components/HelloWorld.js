@@ -1,10 +1,10 @@
 import React from 'react';
-import { Heading, Stack, Text, Image, Grid, GridItem, Center, UnorderedList, ListItem, useBreakpointValue, Link, ExternalLinkIcon} from '@chakra-ui/react';
+import { Heading, Stack, Text, Image, Grid, GridItem, Center, UnorderedList, ListItem, useBreakpointValue} from '@chakra-ui/react';
 import MySpacer from './MySpacer.js'
 import '../index.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 
 const HelloWorld = () => {

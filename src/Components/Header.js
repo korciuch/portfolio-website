@@ -2,9 +2,6 @@ import React from 'react'
 import Navigation from './Navigation'
 import { Flex, Spacer, Heading, Text, HStack} from '@chakra-ui/react'
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link
   } from 'react-router-dom';
 
