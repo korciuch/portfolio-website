@@ -16,23 +16,23 @@ After the board has been randomly generated, we call our recursive backtracking 
 
 ```
 1
-{{'I', 'I', 'I', 'R'}, {'M', 'E', 'W', 'A'}, {'E', 'P', 'O', 'B'}, {'N', 'P', 'T', 'T'}}
-{"ABO", "AIR", "AWE", "AWEE", "BAR", "BOA", "BOAR", "BOP", "BOT", "BOTT", "BOW", "EME", "IMP", "MEN", "MEOW", "MEW", "NEE", "NEEM", "NEEP", "OAR", "OPE", "OPEN", "OPT", "OWE", "PEE", "PEEN", "PEEP", "PEN", "PEP", "PEPO", "PEW", "POEM", "POP", "POPE", "POT", "POW", "RAW", "RIA", "TOE", "TOP", "TOPE", "TOPEE", "TOT", "TOW", "TOWIE", "WAB", "WAIR", "WAR", "WEE", "WEEN", "WEEP", "WEIR", "WEPT", "WIMP", "WOE", "WOP", "WOT"}
+\{\{'I', 'I', 'I', 'R'\}, \{'M', 'E', 'W', 'A'\}, \{'E', 'P', 'O', 'B'\}, \{'N', 'P', 'T', 'T'\}\}
+\{"ABO", "AIR", "AWE", "AWEE", "BAR", "BOA", "BOAR", "BOP", "BOT", "BOTT", "BOW", "EME", "IMP", "MEN", "MEOW", "MEW", "NEE", "NEEM", "NEEP", "OAR", "OPE", "OPEN", "OPT", "OWE", "PEE", "PEEN", "PEEP", "PEN", "PEP", "PEPO", "PEW", "POEM", "POP", "POPE", "POT", "POW", "RAW", "RIA", "TOE", "TOP", "TOPE", "TOPEE", "TOT", "TOW", "TOWIE", "WAB", "WAIR", "WAR", "WEE", "WEEN", "WEEP", "WEIR", "WEPT", "WIMP", "WOE", "WOP", "WOT"\}
 number of words: 57
 score: 59
 129
-{{'N', 'T', 'F', 'R'}, {'E', 'O', 'G', 'U'}, {'O', 'I', 'E', 'E'}, {'E', 'C', 'T', 'T'}}
-{"CEE", "CETE", "CION", "CITE", "COO", "COOEE", "COOF", "COON", "COOT", "EGO", "EON", "ETIC", "FOE", "FOG", "FOGIE", "FON", "FONT", "FRUG", "FUG", "FUGIO", "FUR", "GEE", "GET", "GIE", "GIEN", "GIT", "GONE", "GOO", "GOT", "GRUE", "ICE", "ION", "NET", "NOETIC", "NOG", "NOO", "NOT", "NOTE", "OCTET", "OFT", "OFTEN", "OGEE", "ONE", "OOT", "RUE", "RUG", "TEE", "TEG", "TEN", "TET", "TIC", "TIE", "TIGON", "TOE", "TOFU", "TOG", "TOGUE", "TOIT", "TON", "TONE", "TOO", "URGE"}
+\{\{'N', 'T', 'F', 'R'\}, \{'E', 'O', 'G', 'U'\}, \{'O', 'I', 'E', 'E'\}, \{'E', 'C', 'T', 'T'\}\}
+\{"CEE", "CETE", "CION", "CITE", "COO", "COOEE", "COOF", "COON", "COOT", "EGO", "EON", "ETIC", "FOE", "FOG", "FOGIE", "FON", "FONT", "FRUG", "FUG", "FUGIO", "FUR", "GEE", "GET", "GIE", "GIEN", "GIT", "GONE", "GOO", "GOT", "GRUE", "ICE", "ION", "NET", "NOETIC", "NOG", "NOO", "NOT", "NOTE", "OCTET", "OFT", "OFTEN", "OGEE", "ONE", "OOT", "RUE", "RUG", "TEE", "TEG", "TEN", "TET", "TIC", "TIE", "TIGON", "TOE", "TOFU", "TOG", "TOGUE", "TOIT", "TON", "TONE", "TOO", "URGE"\}
 number of words: 62
 score: 71
 257
-{{'A', 'I', 'Z', 'F'}, {'H', 'H', 'O', 'I'}, {'O', 'A', 'M', 'M'}, {'R', 'L', 'E', 'Y'}}
-{"AHA", "ALE", "ALME", "ALOHA", "AMI", "AMMO", "EAR", "EARL", "ELM", "ELMY", "FIZ", "FOAL", "FOAM", "FOAMY", "FOH", "HAE", "HAEM", "HAH", "HAHA", "HALE", "HALM", "HALO", "HAM", "HAME", "HAMMY", "HAO", "HAOLE", "HARL", "HMM", "HOAR", "HOLE", "HOLEY", "HOLM", "HOM", "HOME", "HOMEY", "HOMY", "HORA", "HORAH", "HORAL", "IMMY", "LAM", "LAME", "LAR", "LEA", "LEAR", "LEMMA", "LEY", "LOAM", "LOAMY", "MAE", "MALE", "MAR", "MARL", "MEAL", "MEL", "MEM", "MEMO", "MHO", "MIM", "MIME", "MOA", "MOM", "MOME", "MOMI", "OAR", "OHIA", "OHM", "OHO", "OLE", "OLEA", "ORA", "ORAL", "ORLE", "RAH", "RALE", "RAM", "RAMI", "RAMMY", "ROAM", "ROLE", "YEA", "YEAH", "YEAR", "ZOA"}
+\{\{'A', 'I', 'Z', 'F'\}, \{'H', 'H', 'O', 'I'\}, \{'O', 'A', 'M', 'M'\}, \{'R', 'L', 'E', 'Y'\}\}
+\{"AHA", "ALE", "ALME", "ALOHA", "AMI", "AMMO", "EAR", "EARL", "ELM", "ELMY", "FIZ", "FOAL", "FOAM", "FOAMY", "FOH", "HAE", "HAEM", "HAH", "HAHA", "HALE", "HALM", "HALO", "HAM", "HAME", "HAMMY", "HAO", "HAOLE", "HARL", "HMM", "HOAR", "HOLE", "HOLEY", "HOLM", "HOM", "HOME", "HOMEY", "HOMY", "HORA", "HORAH", "HORAL", "IMMY", "LAM", "LAME", "LAR", "LEA", "LEAR", "LEMMA", "LEY", "LOAM", "LOAMY", "MAE", "MALE", "MAR", "MARL", "MEAL", "MEL", "MEM", "MEMO", "MHO", "MIM", "MIME", "MOA", "MOM", "MOME", "MOMI", "OAR", "OHIA", "OHM", "OHO", "OLE", "OLEA", "ORA", "ORAL", "ORLE", "RAH", "RALE", "RAM", "RAMI", "RAMMY", "ROAM", "ROLE", "YEA", "YEAH", "YEAR", "ZOA"\}
 number of words: 85
 score: 96
 385
-{{'A', 'I', 'S', 'E'}, {'R', 'Z', 'E', 'O'}, {'U', 'I', 'A', 'G'}, {'C', 'Y', 'S', 'F'}}
-{"AGE", "AGEE", "AGES", "AGO", "AIR", "AIS", "ARIA", "ARIAS", "ARISE", "AYS", "CIAO", "CIS", "CUR", "CURIA", "CURIAE", "CURIE", "CURIES", "EASY", "EGO", "EGOS", "FAG", "FAGS", "FAIR", "FAIRIES", "FAS", "FAY", "FAYS", "FAZE", "FAZES", "GAE", "GAES", "GAS", "GAY", "GAYS", "GAZE", "GAZES", "GEE", "GEES", "GOA", "GOAS", "GOES", "ICY", "IRIS", "IZAR", "OAF", "OAFS", "OES", "OGEE", "OGEES", "OSE", "RAISE", "RAZE", "RAZEE", "RAZEES", "RAZES", "RIA", "RIAS", "RIES", "RISE", "SAE", "SAG", "SAGE", "SAGES", "SAGO", "SAGOS", "SAY", "SEA", "SEAS", "SEE", "SEG", "SEGO", "SEGS", "SEI", "SEIS", "SIC", "SIES", "SIR", "SIZAR", "SIZE", "SIZES", "URIC", "ZAG", "ZAGS", "ZEE", "ZEES"}
+\{\{'A', 'I', 'S', 'E'\}, \{'R', 'Z', 'E', 'O'\}, \{'U', 'I', 'A', 'G'\}, \{'C', 'Y', 'S', 'F'\}\}
+\{"AGE", "AGEE", "AGES", "AGO", "AIR", "AIS", "ARIA", "ARIAS", "ARISE", "AYS", "CIAO", "CIS", "CUR", "CURIA", "CURIAE", "CURIE", "CURIES", "EASY", "EGO", "EGOS", "FAG", "FAGS", "FAIR", "FAIRIES", "FAS", "FAY", "FAYS", "FAZE", "FAZES", "GAE", "GAES", "GAS", "GAY", "GAYS", "GAZE", "GAZES", "GEE", "GEES", "GOA", "GOAS", "GOES", "ICY", "IRIS", "IZAR", "OAF", "OAFS", "OES", "OGEE", "OGEES", "OSE", "RAISE", "RAZE", "RAZEE", "RAZEES", "RAZES", "RIA", "RIAS", "RIES", "RISE", "SAE", "SAG", "SAGE", "SAGES", "SAGO", "SAGOS", "SAY", "SEA", "SEAS", "SEE", "SEG", "SEGO", "SEGS", "SEI", "SEIS", "SIC", "SIES", "SIR", "SIZAR", "SIZE", "SIZES", "URIC", "ZAG", "ZAGS", "ZEE", "ZEES"\}
 number of words: 85
 score: 109
 ...
