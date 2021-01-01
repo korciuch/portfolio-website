@@ -3,7 +3,7 @@ import { Heading, Stack, Text, Image, Grid, GridItem, Center, UnorderedList, Lis
 import MySpacer from './MySpacer.js'
 import '../index.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 
@@ -24,27 +24,33 @@ const HelloWorld = () => {
         xs: "md"
     })
 
-    const socials = [{
-        name: 'Github',
-        icon: faGithub,
-        link: 'https://github.com/korciuch'
-    },
-    {
-        name: 'LinkedIn',
-        icon: faLinkedin,
-        link: 'https://www.linkedin.com/in/kyleorciuch/'
-    },
-    {
-        name: 'Instagram',
-        icon: faInstagram,
-        link: 'https://www.instagram.com/kyle.orciuch/?hl=en'
-    },
-    {
-        name: 'Twitter',
-        icon: faTwitter,
-        link: 'https://twitter.com/kyle9883?lang=en'
-    }
-]
+    const socials = [
+        {
+            name: 'Github',
+            icon: faGithub,
+            link: 'https://github.com/korciuch'
+        },
+        {
+            name: 'LinkedIn',
+            icon: faLinkedin,
+            link: 'https://www.linkedin.com/in/kyleorciuch/'
+        },
+        /* {
+            name: 'Instagram',
+            icon: faInstagram,
+            link: 'https://www.instagram.com/kyle.orciuch/?hl=en'
+        }, */
+        {
+            name: 'Twitter',
+            icon: faTwitter,
+            link: 'https://twitter.com/kyle9883?lang=en'
+        },
+        {
+            name: 'Email',
+            icon: faEnvelope,
+            link: 'mailto:korciuch@stanford.edu'
+        }
+    ];
 
     return (
         <Stack p="5px">
@@ -56,14 +62,14 @@ const HelloWorld = () => {
             <Grid
                 h="200px"
                 templateRows="repeat(3, 1fr)"
-                templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)"]}
+                templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(3, 1fr)"]}
                 gap={50}
                 px={["5%", "10%", "15%", "20%"]}
                 >
                 <GridItem 
                     //bg="gray.400"
                     rowSpan={1}
-                    colSpan={[1, 2]}
+                    colSpan={[1, 1, 2]}
                     p="5px"
                 >
                     <Heading size={resizeLargeHeader}>
@@ -88,7 +94,7 @@ const HelloWorld = () => {
                             objectFit="cover"
                             //objectPosition="0 -35%"
                             src="./Images/outdoor-headshot.JPG"
-                            boxSize="225px"
+                            boxSize="250px"
                             style={{
                                 clipPath: "polygon(100% 0%, 30% 0%, 0% 30%, 0% 100%, 70% 100%, 100% 70%)"
                             }}
@@ -99,7 +105,7 @@ const HelloWorld = () => {
                 <GridItem 
                     //bg="gray.400"
                     rowSpan={1}
-                    colSpan={[1, 2]}
+                    colSpan={[1, 1, 2]}
                     p="5px"
                 >
                     <Heading
@@ -112,13 +118,22 @@ const HelloWorld = () => {
                         paddingBottom="10px"
                     >
                         Hello! I'm Kyle Orciuch, a dedicated varsity student-athlete at 
-                        Stanford University who is seeking a software engineering internship 
+                        Stanford University who is seeking a data science / software engineering internship 
                         for summer 2021. My experience as an elite athlete has taught me that 
                         the greatest challenges cannot be solved without teamwork, as we know that the ball
                         always moves faster than the individual. Thus, I know what it is like to be a 
                         team-player, and a leader when necessary. My undergraduate CS career at Stanford 
                         so far has given me a strong command of systems programming in C/C++ and data
                         science in Python. My major track is Artificial Intelligence.
+                        <a
+                            href="./Articles/orciuch_kyle_resume_december_2020.PDF"
+                            >
+                            <Text 
+                                color="blue.500"
+                            >
+                                [ Resume ]
+                            </Text>
+                        </a>
                     </Text>
                     <Heading
                         size="sm"
@@ -181,6 +196,9 @@ const HelloWorld = () => {
                         <UnorderedList
                             paddingLeft="20px"
                         >
+                            <ListItem>
+                                Repos available upon request:
+                            </ListItem>
                             <ListItem>
                                 CS 106B - Huffman Encoding [File Compression] (C++) 
                             </ListItem>

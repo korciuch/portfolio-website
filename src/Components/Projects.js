@@ -1,85 +1,105 @@
-import React, { useState }from 'react';
+import React, { useEffect, useState }from 'react';
 import { Document, Page } from 'react-pdf';
-import { Heading, Stack, Text, Image, Grid, GridItem, Center, UnorderedList, ListItem, useBreakpointValue, Link, ExternalLinkIcon, Container} from '@chakra-ui/react';
+import { Heading, Stack, Text, Image, Grid, GridItem, Center, UnorderedList, ListItem, useBreakpointValue, Link, ExternalLinkIcon, Flex} from '@chakra-ui/react';
 import MySpacer from './MySpacer.js'
 import '../index.css'
-import { pdfjs } from 'react-pdf';
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+import ReactMarkdown from 'react-markdown'
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import {cb} from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 const Projects = () => {
+    const [md, setMd] = useState("");
+    
+    /* useEffect(()=> {
+        fetch("https://raw.githubusercontent.com/korciuch/portfolio-website/master/README.md")
+            .then((r)=>{
+                r.text().then((t)=>{
+                    setMd(t);
+                })
+            })
+    }, []) */
 
-    const resizeLargeHeader = useBreakpointValue({
-        base: "lg", 
-        lg: "3xl",
-        md:"2xl",
-        sm: "lg",
-        xs: "lg"
-    })
-    const resizeSubHeader = useBreakpointValue({
-        base: "md",
-        lg: "xl",
-        md: "lg",
-        sm: "md",
-        xs: "md"
-    })
+    useEffect(()=> {
+        fetch("/Articles/cs109_final_project.md")
+            .then((r)=>{
+                r.text().then((t)=>{
+                    setMd(t);
+                })
+            })
+    }, []) 
 
-    const rescaleDoc = useBreakpointValue({
-        base: "0.5",
-        lg: "1.5",
-        md: "1.0",
-        sm: "0.75",
-        xs: "0.33"
-    })
-
-    const [numPages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1);
-
-    function onDocumentLoadSuccess({ numPages }) {
-        setNumPages(numPages);  
+    const renderers = {
+        code: ({language, value}) => {
+            return <Flex
+                    direction="column"
+                    paddingTop="20px"
+                    paddingBottom="20px"
+                    >
+                        <SyntaxHighlighter 
+                            style={cb} 
+                            language={language} 
+                            children={value} 
+                        />
+                    </Flex>
+        },
+        heading: ({level, children}) => {
+            return <Heading 
+                    marginTop="5px"
+                    marginBottom="5px"
+                    as={"h" + level} 
+                    fontSize={35 - 4*level}
+                    children={children}
+                    />
+        },
+        // add breakpoints for images - make article dynamic 
+        image: ({alt, src, title}) => {
+            return <Center>
+                        <Image 
+                            alt={alt}
+                            src={src} 
+                            title={title}
+                            boxSize={["100%", "100%", "100%", "100%", "75%"]}
+                        />
+                    </Center>
+        },
+        paragraph: ({children}) => {
+            return <Text 
+                    marginTop="5px"
+                    marginBottom="5px"
+                    children={children}
+                    />
+        },
+        blockquote: ({children}) => {
+            return  <Center
+                        paddingRight="5%"
+                        paddingLeft="5%"
+                        marginTop="15px"
+                        marginBottom="15px"
+                    >
+                        <Text
+                            children={children}
+                        >
+                        </Text>
+                    </Center>
+        },
+        link: p => {
+            console.log(p)
+            return (p.node.children[0].value == "iframe" ? 
+            <Center><iframe iframe width="100%" height="700px"  src={p.href}/></Center>
+            : 
+            <a children={p.children} href={p.node.url}/>)
+        }
     }
 
     return (
-        <>
-            <Stack
-                p="5px"
-                px={["5%", "10%", "15%", "20%"]}
-            >
-                <MySpacer height={[10, 25, 50]}/>
-                <Heading size={resizeLargeHeader}>
-                    Featured Project
-                </Heading>
-                <Heading 
-                    size={resizeSubHeader}
-                    paddingTop="10px"    
-                >
-                    CS 109 - Expected Value of Boggle Simulation
-                </Heading>
-            </Stack>
-            <Stack 
-                p="5px"
-                px={["5%", "10%", "15%", "20%"]}
-                bg="gray.100"
-            >
-                <Center>
-                    <Document
-                        file="./Articles/cs_109_final_project_orciuch_lau.pdf"
-                        onLoadSuccess={onDocumentLoadSuccess}
-                    >
-                        {Array.from(Array(numPages + 1).keys()).map((i) => {
-                            return( 
-                                <>
-                                    <Page scale={rescaleDoc} 
-                                        noData="" 
-                                        pageNumber={i}/>
-                                    <MySpacer />
-                                </>
-                            )
-                        })}
-                    </Document>
-                </Center>
-                <MySpacer height={50}/>
-            </Stack>
-        </>
+        <Flex
+            direction="column"
+            px={["5%", "10%", "15%", "20%"]}
+        >
+            <MySpacer height={10}/>
+            <ReactMarkdown renderers={renderers} source={md} />
+            <MySpacer height={75}/>
+        </Flex>
     )
 }
 
