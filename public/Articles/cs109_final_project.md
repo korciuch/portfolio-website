@@ -4,7 +4,7 @@
 
 ### Introduction
 
-Given that a Boggle board has the condition where i.e. \{\{'a': 1}, \{'b': 0\}, … , \{'y': 0\}, \{'z': 1\}\} is the dice-face character frequency map, what is the conditional expected score based on 650k+ Boggle game simulations? We&#39;ll start by explaining how we randomly set up the board for each simulated game, and then we'll show how we generated our simulated data. The following list of 16 uppercase strings represents the 6-sided dice that will be randomly shuffled:
+Given that a Boggle board has the condition where i.e. {{'a': 1}, {'b': 0}, … , {'y': 0}, {'z': 1}} is the dice-face character frequency map, what is the conditional expected score based on 650k+ Boggle game simulations? We&#39;ll start by explaining how we randomly set up the board for each simulated game, and then we'll show how we generated our simulated data. The following list of 16 uppercase strings represents the 6-sided dice that will be randomly shuffled:
 
 > #### cubes = [&#39;AAEEGN&#39;, &#39;ABBJOO&#39;, &#39;ACHOPS&#39;, &#39;AFFKPS&#39;, &#39;AOOTTW&#39;, &#39;CIMOTU&#39;, &#39;DEILRX&#39;, &#39;DELRVY&#39;, &#39;DISTTY&#39;, &#39;EEGHNW&#39;, &#39;EEINSU&#39;, &#39;EHRTVW&#39;, &#39;EIOSST&#39;, &#39;ELRTTY&#39;, &#39;HIMNQU&#39;, &#39;HLNNRZ&#39;]
 
