@@ -42,7 +42,7 @@ As our simulated games are completed, we send our results to a .txt log file to 
 
 ### Data Generation (C++)
 
-```cpp
+```
 #include <string>
 #include <fstream>
 #include <sstream>
@@ -97,7 +97,7 @@ int main() {
 
 ### Data Parsing (Python)
 
-```python
+```
 def parse_data(filepath):
     output = {}
     counter, game_id = 0
@@ -134,7 +134,7 @@ def parse_data(filepath):
 
 ### Console Program
 
-```python
+```
 from pip._vendor.distlib.compat import raw_input
 
 def user_query(parsed_data):
@@ -176,7 +176,7 @@ def user_query(parsed_data):
 ```
 ### Search
 
-```python
+```
 import numpy as np
 
 def search(output, usr_dict) -> []:
@@ -198,7 +198,7 @@ def search(output, usr_dict) -> []:
 ```
 
 ### Sub-Plotting
-```python
+```
 import math
 import numpy as np
 import seaborn as sns
@@ -267,7 +267,7 @@ plotting...
 
 ### Results
 
-```python
+```
 import csv
 
 def export_to_csv(parsed_data):
