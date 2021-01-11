@@ -42,7 +42,7 @@ As our simulated games are completed, we send our results to a .txt log file to 
 
 ### Data Generation (C++)
 
-```
+```cpp
 #include <string>
 #include <fstream>
 #include <sstream>
@@ -97,7 +97,7 @@ int main() {
 
 ### Data Parsing (Python)
 
-```
+```python
 def parse_data(filepath):
     output = {}
     counter, game_id = 0
@@ -134,7 +134,7 @@ def parse_data(filepath):
 
 ### Console Program
 
-```
+```python
 from pip._vendor.distlib.compat import raw_input
 
 def user_query(parsed_data):
@@ -176,7 +176,7 @@ def user_query(parsed_data):
 ```
 ### Search
 
-```
+```python
 import numpy as np
 
 def search(output, usr_dict) -> []:
@@ -198,8 +198,7 @@ def search(output, usr_dict) -> []:
 ```
 
 ### Sub-Plotting
-
-```
+```python
 import math
 import numpy as np
 import seaborn as sns
@@ -268,7 +267,7 @@ plotting...
 
 ### Results
 
-```
+```python
 import csv
 
 def export_to_csv(parsed_data):
@@ -289,6 +288,18 @@ def export_to_csv(parsed_data):
 
             alpha_stats_writer.writerow(row)
 ```
+
+### CSV
+
+```
+143.26,130.82,133.4,140.86,126.75,121.37,126.83,137.44,142.35,110.35,121.08,141.89,139.72,142.42,139.77,137.02,110.74,147.5,145.12,141.12,132.61,120.48,129.38,107.14,126.21,107.55
+154.95,0.0,116.03,132.94,149.97,0.0,103.84,121.03,135.86,0.0,0.0,140.75,131.89,138.19,139.72,124.27,0.0,158.66,166.09,144.18,117.96,96.3,106.9,0.0,100.59,0.0
+151.23,0.0,0.0,117.52,156.68,0.0,0.0,100.81,119.34,0.0,0.0,131.81,0.0,123.27,129.93,0.0,0.0,154.94,164.96,132.82,99.93,0.0,83.75,0.0,78.3,0.0
+138.02,0.0,0.0,0.0,148.08,0.0,0.0,82.57,97.18,0.0,0.0,117.08,0.0,103.1,114.21,0.0,0.0,140.14,149.7,115.38,0.0,0.0,0.0,0.0,0.0,0.0
+110.14,0.0,0.0,0.0,127.54,0.0,0.0,61.27,81.52,0.0,0.0,0.0,0.0,76.79,91.89,0.0,0.0,115.87,129.52,92.17,0.0,0.0,0.0,0.0,0.0,0.0
+0.0,0.0,0.0,0.0,101.91,0.0,0.0,0.0,51.14,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,68.99,0.0,0.0,0.0,0.0,0.0,0.0
+```
+
 ### Character Frequency vs Diminishing Utility
 
 [iframe](https://docs.google.com/spreadsheets/d/e/2PACX-1vSKwFjaOy96OWYrkGPtjnI2FKiAdEpvY-V6zrsQz1E1j5Yd8oQtiFY7hE9HTtFwgRWaTCVQeci_IeiM/pubchart?oid=1490386963&amp;format=interactive)
