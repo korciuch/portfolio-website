@@ -198,6 +198,7 @@ def search(output, usr_dict) -> []:
 ```
 
 ### Sub-Plotting
+
 ```
 import math
 import numpy as np
