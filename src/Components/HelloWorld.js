@@ -126,7 +126,7 @@ const HelloWorld = () => {
                         so far has given me a strong command of systems programming in C/C++ and data
                         science in Python. My major track is Artificial Intelligence.
                         <a
-                            href="./Articles/resume_march_orciuch.PDF"
+                            href="./Articles/resume_march_orciuch.pdf"
                             >
                             <Text 
                                 color="blue.500"
