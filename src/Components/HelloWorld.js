@@ -139,18 +139,19 @@ const HelloWorld = () => {
                         size="sm"
                         paddingBottom="10px"
                     >
-                        Career Objectives
+                        What am I doing now?
                     </Heading>
                     <Text
                         paddingBottom="10px"
                     >
-                        Recently, I decided to move on from the varsity soccer team to focus on my studies and
-                        career readiness. This summer, I have had the pleasure of interning at Second Front 
+                        In other news, I decided to move on from the varsity soccer team to focus on my studies and
+                        career readiness. It was a tough decsion, though I thought it was a necessary step forward.
+                        This past summer, I had the pleasure of interning at Second Front 
                         Systems under Chief Data Scientist Michael Neumann, who worked previously at the CIA.
                         I learned a great deal about DevSecOps, CI/CD pipelines, ETL processes. The core concept
                         behind the company is pretty cool, namely that conducting successful acquisition warfare
-                        is crucial to the national security and competitiveness of the United States. 
-                        Feel free to check them out: 
+                        is crucial to the national security and competitiveness of the United States. I will be working
+                        for them for the rest of the year part-time. Feel free to check them out: 
                         <a
                             href="https://secondfront.com"
                             >
@@ -165,7 +166,7 @@ const HelloWorld = () => {
                         size="sm"
                         paddingBottom="10px"
                     >
-                        What am I doing now?
+                        What have I done this year? 
                     </Heading>
                     <Text
                         paddingBottom="10px"
