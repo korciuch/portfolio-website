@@ -20,7 +20,7 @@ Part of my Stanford admissions profile was my experience as a student-athlete.  
 
 When I arrived at the Stanford Men's Soccer program in the summer of 2018, I wasn't as strong mentally and physically - there were times when I thought that I wanted to pivot to being a regular student because things got really tough, barely balancing a technical major and competitive soccer.  However, our head coach Jeremy Gunn instilled in us the growth mindset mentality.  He has always taught that backing down due to being uncomfortable and challenged stifles overall growth and diminishes resiliency.  I personally strive to join organizations where I am initially a small player, but leave amongst the most influential.  This happened when I joined the academy, as I struggled to get playing time for a couple seasons until I made my breakthrough starting season in 2016.  Strictly more recently, when faced with the challenge of the pandemic, restrictive Santa Clara public health guidelines, and a postponed 2020 season, our team has practiced what he preached by 'competing with ourselves' dispersed around the country during the restrictive lockdowns this year.
 
-![Header Image](./Images/honorary-captain_1086x724.jpg)
+![Header Image](./Images/action-shot.jpg)
 
 ### Interests
 #### Technical
