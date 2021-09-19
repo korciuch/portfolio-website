@@ -117,21 +117,21 @@ const HelloWorld = () => {
                     <Text
                         paddingBottom="10px"
                     >
-                        Hello! I'm Kyle Orciuch, a dedicated varsity student-athlete at 
-                        Stanford University who is seeking a data science / software engineering internship 
-                        for summer 2021. My experience as an elite athlete has taught me that 
+                        Hello! I'm Kyle Orciuch, an undergrad CS student at 
+                        Stanford University who is seeking a machine learning / data engineering internship 
+                        for the summer of 2022. My experience as a former elite athlete has taught me that 
                         the greatest challenges cannot be solved without teamwork, as we know that the ball
-                        always moves faster than the individual. Thus, I know what it is like to be a 
+                        always moves faster than an individual. Thus, I know what it is like to be a 
                         team-player, and a leader when necessary. My undergraduate CS career at Stanford 
                         so far has given me a strong command of systems programming in C/C++ and data
-                        science in Python. My major track is Artificial Intelligence.
+                        science in Python. My major track is Artificial Intelligence. You can read my CV here:
                         <a
                             href="./Articles/orciuch_resume_09-18-21.pdf"
                             >
                             <Text 
                                 color="blue.500"
                             >
-                                [ Resume ]
+                                Resume
                             </Text>
                         </a>
                     </Text>
@@ -144,13 +144,22 @@ const HelloWorld = () => {
                     <Text
                         paddingBottom="10px"
                     >
-                        Because I am a member of the varsity men's soccer team at Stanford, I have
-                        a unique opportunity to experiment with the worlds of professional sports
-                        and Silicon Valley. Therefore, if my playing career allows it, my intention
-                        is to become a professional soccer player. However, I will be putting equal
-                        attention to my career readiness as a aspriring ML/data science researcher. My
-                        ultimate goal is to gain a foothold into tech leadership as a senior project
-                        manager.
+                        Recently, I decided to move on from the varsity soccer team to focus on my studies and
+                        career readiness. This summer, I have had the pleasure of interning at Second Front 
+                        Systems under Chief Data Scientist Michael Neumann, who worked previously at the CIA.
+                        I learned a great deal about DevSecOps, CI/CD pipelines, ETL processes. The core concept
+                        behind the company is pretty cool, namely that conducting successful acquisition warfare
+                        is crucial to the national security and competitiveness of the United States. 
+                        Feel free to check them out: 
+                        <a
+                            href="https://secondfront.com"
+                            >
+                            <Text 
+                                color="blue.500"
+                            >
+                                2F Website
+                            </Text>
+                        </a>
                     </Text>
                     <Heading
                         size="sm"
@@ -161,13 +170,20 @@ const HelloWorld = () => {
                     <Text
                         paddingBottom="10px"
                     >
-                        I have used my winter break to apply for summer 2021 internships and also
-                        to build my own portfolio website from scratch using React.js and ChakraUI.
-                        Moreover, I am entering the winter quarter signed up for ENGR 108 (Introduction 
-                        to Matrix Methods) and CS 161 (Design and Analysis of Algorithms), which I see
-                        as important (and exciting!) stepping stones for my upcoming AI/ML classes. Finally,
-                        I'm ramping up my training as our team prepares for the 2021 spring season (stay
-                        tuned for the PAC-12 TV schedule)! 
+                        Earlier this year, I had the opportunity to work on a Stanford publication for CS 230, 
+                        taught by Andrew Ng. Two friends of mine, Ryan Ludwick and Philip Lambert, decided to
+                        work on a deep learning project for classifying commmon chest xray abnormalities. We were
+                        inspired to choose this topic because of the stress being put on hospitals and intensive
+                        care units all across the country at the time. You can read the paper here:
+                        <a
+                            href="http://cs230.stanford.edu/projects_winter_2021/reports/70763780.pdf"
+                            >
+                            <Text 
+                                color="blue.500"
+                            >
+                                CS 230 Website
+                            </Text>
+                        </a>
                     </Text>
                 </GridItem>
                 <GridItem 
@@ -200,13 +216,16 @@ const HelloWorld = () => {
                                 Repos available upon request:
                             </ListItem>
                             <ListItem>
-                                CS 106B - Huffman Encoding [File Compression] (C++) 
-                            </ListItem>
-                            <ListItem>
                                 CS 107 - Implicit & Explicit Heap Allocators (C)
                             </ListItem>
                             <ListItem>
                                 CS 110 - Custom Threadpool & Multithreaded RSS Aggregator (C++)
+                            </ListItem>
+                            <ListItem>
+                                CS 124 - Chatbot: Interactive Movie Recommender System (Python)
+                            </ListItem>
+                            <ListItem>
+                                CS 230 - Diagnosing Chest Abnormalities with Deep Learning (Keras)
                             </ListItem>
                         </UnorderedList>
                         <Heading size="md">
