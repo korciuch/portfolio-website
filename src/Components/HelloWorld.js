@@ -1,252 +1,173 @@
-import React from 'react';
-import { Heading, Stack, Text, Image, Grid, GridItem, Center, UnorderedList, ListItem, useBreakpointValue} from '@chakra-ui/react';
-import MySpacer from './MySpacer.js'
-import '../index.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
-
+import React from "react";
+import {
+  Heading,
+  Stack,
+  Text,
+  Image,
+  Grid,
+  GridItem,
+  Center,
+  useBreakpointValue,
+  Link,
+} from "@chakra-ui/react";
+import MySpacer from "./MySpacer.js";
+import "../index.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faExternalLinkAlt,
+  faLocationArrow,
+  faBuilding,
+} from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import Milestones from "./TimeLine.js";
 
 const HelloWorld = () => {
+  const resizeLargeHeader = useBreakpointValue({
+    base: "lg",
+    lg: "xl",
+    md: "xl",
+    sm: "lg",
+    xs: "lg",
+  });
+  const resizeSubHeader = useBreakpointValue({
+    base: "md",
+    lg: "md",
+    md: "md",
+    sm: "md",
+    xs: "md",
+  });
 
-    const resizeLargeHeader = useBreakpointValue({
-        base: "lg", 
-        lg: "3xl",
-        md:"2xl",
-        sm: "lg",
-        xs: "lg"
-    })
-    const resizeSubHeader = useBreakpointValue({
-        base: "md",
-        lg: "xl",
-        md: "lg",
-        sm: "md",
-        xs: "md"
-    })
+  const socials = [
+    {
+      name: "Github",
+      icon: faGithub,
+      link: "https://github.com/korciuch",
+    },
+    {
+      name: "LinkedIn",
+      icon: faLinkedin,
+      link: "https://www.linkedin.com/in/kyleorciuch/",
+    },
+    {
+      name: "Email",
+      icon: faEnvelope,
+      link: "mailto:kyle.orciuch@alumni.stanford.edu",
+    },
+  ];
 
-    const socials = [
-        {
-            name: 'Github',
-            icon: faGithub,
-            link: 'https://github.com/korciuch'
-        },
-        {
-            name: 'LinkedIn',
-            icon: faLinkedin,
-            link: 'https://www.linkedin.com/in/kyleorciuch/'
-        },
-        /* {
-            name: 'Instagram',
-            icon: faInstagram,
-            link: 'https://www.instagram.com/kyle.orciuch/?hl=en'
-        }, */
-        {
-            name: 'Twitter',
-            icon: faTwitter,
-            link: 'https://twitter.com/kyle9883?lang=en'
-        },
-        {
-            name: 'Email',
-            icon: faEnvelope,
-            link: 'mailto:korciuch@stanford.edu'
-        }
-    ];
+  return (
+    <Stack p="5px">
+      <MySpacer height={[10, 25, 50]} />
+      <Grid
+        h="200px"
+        templateRows="repeat(3, 1fr)"
+        templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(3, 1fr)"]}
+        gap={50}
+        px={["5%", "10%", "15%", "20%"]}
+      >
+        <GridItem rowSpan={1} colSpan={[1, 1, 2]} p="5px">
+          <MySpacer height={20} />
+          <Heading size={resizeLargeHeader}>
+            <FontAwesomeIcon color="#7fafe8" icon={faBuilding} />
+            &nbsp; Building in the proptech space
+          </Heading>
+          <Heading size={resizeSubHeader} paddingTop="10px">
+            <FontAwesomeIcon color="#7fafe8" icon={faLocationArrow} />
+            &nbsp;&nbsp;&nbsp;&nbsp; San Francisco Bay Area
+          </Heading>
+          <MySpacer height={25} />
+          <Text paddingBottom="10px">
+            Kyle Orciuch is a recent graduate from Stanford University with a
+            degree in Computer Science with an AI specialization. He is the
+            Co-Founder & CEO of{" "}
+            <Link color="#7fafe8" href="https://causaltwin.ai">
+              Causal Twin, Inc.
+            </Link>
+            , a pre-seed stage start-up focused on the development of autonomous
+            LiDAR drones for complete construction site monitoring, mapping &
+            version control. Current pitch deck for the SiteSense product
+            concept can be found here:{" "}
+            <Link
+              color="#7fafe8"
+              href="https://docsend.com/view/q3f9hxj6dnguneci"
+            >
+              Docsend
+            </Link>
+          </Text>
+          <Text>
+            Kyle has also worked as a Data Scientist and an Intern at Second
+            Front Systems, a company that provides rapid software hardening &
+            accreditation for govcloud use-cases. In addition to his technical
+            skills, he was a varsity student-athlete on the men’s soccer team at
+            Stanford and was awarded two PAC-12 championships.
+          </Text>
+          <MySpacer height={7.5} />
+          <Text>
+            <b>Vision:&nbsp;</b> "GitHub meets point cloud data" of buildings
+            under construction via repeatable, autonomous scanning platforms
+            such as drones or other robots. We are all well familiar with
+            version control systems for code, i.e. knowing exactly what lines
+            were added, modified, or deleted. However, there isn't a robust set
+            of algorithms for understanding changes between 3D point cloud scans
+            of the same general location. High quality scans can each take tens
+            of gigabtes of memory, if not hundreds.
+          </Text>
+          <MySpacer height={7.5} />
+          <Text>
+            Scenarios that require repeitive scans of the same areas will
+            contain a lot of duplicative information which rather could be
+            broken down into a tree of additions, modifications, and
+            subtractions. Only problem with this is that while traditionally the
+            positions of characters and lines within files are well-defined,
+            point clouds collected without geospatial tags don't have this
+            nicety and would require manual alignment through a software such as
+            CloudCompare. We at CausalTwin believe that the Earth is a giant
+            filesystem, and that we need a robust framework for tracking changes
+            to physical infrastructure that rapidly evolves over time—in our
+            case, this happens to be large commercial construction projeccts.
+          </Text>
+          <Milestones />
+        </GridItem>
+        <GridItem
+          //bg="gray.400"
+          rowSpan={1}
+          colSpan={1}
+          p="5px"
+        >
+          <Center>
+            <Image
+              objectFit="cover"
+              src="./Images/city_hall_alt_downscaled.jpg"
+              style={{
+                clipPath:
+                  "polygon(100% 5%, 30% 5%, 0% 30%, 0% 100%, 75% 90%, 90% 75%)",
+              }}
+            />
+          </Center>
+          <MySpacer height={50} />
+          <Heading size="lg">Socials</Heading>
+          <MySpacer height={10} />
+          <Stack>
+            {socials.map((s) => {
+              return (
+                <a href={s.link} target="_blank">
+                  <FontAwesomeIcon icon={s.icon} /> {s.name}{" "}
+                  <FontAwesomeIcon
+                    size="xs"
+                    color="gray"
+                    icon={faExternalLinkAlt}
+                  />
+                </a>
+              );
+            })}
+          </Stack>
+        </GridItem>
 
-    return (
-        <Stack p="5px">
+        <MySpacer height={50} />
+      </Grid>
+    </Stack>
+  );
+};
 
-            {/* <Heading fontSize="1em"> 
-                Hello, {this.props.name} - Welcome to your website!
-            </Heading> */}
-            <MySpacer height={[10, 25, 50]}/>
-            <Grid
-                h="200px"
-                templateRows="repeat(3, 1fr)"
-                templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(3, 1fr)"]}
-                gap={50}
-                px={["5%", "10%", "15%", "20%"]}
-                >
-                <GridItem 
-                    //bg="gray.400"
-                    rowSpan={1}
-                    colSpan={[1, 1, 2]}
-                    p="5px"
-                >
-                    <Heading size={resizeLargeHeader}>
-                        Student-Athlete attending Stanford University (CS '22)
-                    </Heading>
-                    <Heading 
-                        size={resizeSubHeader}
-                        paddingTop="10px"    
-                    >
-                        San Francisco Bay Area
-                    </Heading>
-                    
-                </GridItem>
-                <GridItem 
-                    //bg="gray.400"
-                    rowSpan={1}
-                    colSpan={1}
-                    p="5px"
-                >  
-                    <Center>
-                        <Image
-                            objectFit="cover"
-                            //objectPosition="0 -35%"
-                            src="./Images/outdoor-headshot.JPG"
-                            boxSize="250px"
-                            style={{
-                                clipPath: "polygon(100% 0%, 30% 0%, 0% 30%, 0% 100%, 70% 100%, 100% 70%)"
-                            }}
-                            //boxShadow="dark-lg"
-                        />
-                    </Center>
-                </GridItem>
-                <GridItem 
-                    //bg="gray.400"
-                    rowSpan={1}
-                    colSpan={[1, 1, 2]}
-                    p="5px"
-                >
-                    <Heading
-                        size="sm"
-                        paddingBottom="10px"
-                    >
-                        Background
-                    </Heading>
-                    <Text
-                        paddingBottom="10px"
-                    >
-                        Hello! I'm Kyle Orciuch, an undergrad CS student at 
-                        Stanford University who is seeking a machine learning / data engineering internship 
-                        for the summer of 2022. My experience as a former elite athlete has taught me that 
-                        the greatest challenges cannot be solved without teamwork, as we know that the ball
-                        always moves faster than an individual. Thus, I know what it is like to be a 
-                        team-player, and a leader when necessary. My undergraduate CS career at Stanford 
-                        so far has given me a strong command of systems programming in C/C++ and data
-                        science in Python. My major track is Artificial Intelligence. You can read my CV here:
-                        <a
-                            href="./Articles/orciuch_resume_09-18-21.pdf"
-                            >
-                            <Text 
-                                color="blue.500"
-                            >
-                                Resume
-                            </Text>
-                        </a>
-                    </Text>
-                    <Heading
-                        size="sm"
-                        paddingBottom="10px"
-                    >
-                        What am I doing now?
-                    </Heading>
-                    <Text
-                        paddingBottom="10px"
-                    >
-                        In other news, I decided to move on from the varsity soccer team to focus on my studies and
-                        career readiness. It was a tough decsion, though I thought it was a necessary step forward.
-                        This past summer, I had the pleasure of interning at Second Front 
-                        Systems under Chief Data Scientist Michael Neumann, who worked previously at the CIA.
-                        I learned a great deal about DevSecOps, CI/CD pipelines, ETL processes. The core concept
-                        behind the company is pretty cool, namely that conducting successful acquisition warfare
-                        is crucial to the national security and competitiveness of the United States. I will be working
-                        for them for the rest of the year part-time. Feel free to check them out: 
-                        <a
-                            href="https://secondfront.com"
-                            >
-                            <Text 
-                                color="blue.500"
-                            >
-                                2F Website
-                            </Text>
-                        </a>
-                    </Text>
-                    <Heading
-                        size="sm"
-                        paddingBottom="10px"
-                    >
-                        What have I done this year? 
-                    </Heading>
-                    <Text
-                        paddingBottom="10px"
-                    >
-                        Earlier this year, I had the opportunity to work on a Stanford publication for CS 230, 
-                        taught by Andrew Ng. Two friends of mine, Ryan Ludwick and Philip Lambert, decided to
-                        work on a deep learning project for classifying commmon chest xray abnormalities. We were
-                        inspired to choose this topic because of the stress being put on hospitals and intensive
-                        care units all across the country at the time. You can read the paper here:
-                        <a
-                            href="http://cs230.stanford.edu/projects_winter_2021/reports/70763780.pdf"
-                            >
-                            <Text 
-                                color="blue.500"
-                            >
-                                CS 230 Website
-                            </Text>
-                        </a>
-                    </Text>
-                </GridItem>
-                <GridItem 
-                    //bg="gray.400"
-                    rowSpan={1}
-                    colSpan={1}
-                    p="5px"
-                >
-                    <Stack>
-                        <Heading size="md">
-                            Featured Projects
-                        </Heading>
-                        <UnorderedList
-                            paddingLeft="20px"
-                        >
-                            <ListItem>
-                                CS 109 - Conditional Expectation of Boggle Simulation (Python)
-                            </ListItem>
-                            <ListItem>
-                                This website! https://kyle.orciuch.org (React.js, ChakraUI)
-                            </ListItem>
-                        </UnorderedList>
-                        <Heading size="md">
-                            Class Projects
-                        </Heading>
-                        <UnorderedList
-                            paddingLeft="20px"
-                        >
-                            <ListItem>
-                                Repos available upon request:
-                            </ListItem>
-                            <ListItem>
-                                CS 107 - Implicit & Explicit Heap Allocators (C)
-                            </ListItem>
-                            <ListItem>
-                                CS 110 - Custom Threadpool & Multithreaded RSS Aggregator (C++)
-                            </ListItem>
-                            <ListItem>
-                                CS 124 - Chatbot: Interactive Movie Recommender System (Python)
-                            </ListItem>
-                            <ListItem>
-                                CS 230 - Diagnosing Chest Abnormalities with Deep Learning (Keras)
-                            </ListItem>
-                        </UnorderedList>
-                        <Heading size="md">
-                            Social
-                        </Heading>
-                        {
-                            socials.map((s) => {
-                                return (
-                                    <a href={s.link} target="_blank">
-                                        <FontAwesomeIcon icon={s.icon} /> {s.name} <FontAwesomeIcon size="xs" color="gray" icon={faExternalLinkAlt} />
-                                    </a>
-                                );
-                            })
-                        }
-                    </Stack>
-                </GridItem>
-                <MySpacer height={50}/>
-            </Grid>
-        </Stack>  
-    )
-}
-
-export default HelloWorld
+export default HelloWorld;

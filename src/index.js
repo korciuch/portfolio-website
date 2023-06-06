@@ -14,12 +14,17 @@ const colors = {
 }
 
 const fonts = {
-  heading: `'Oxygen', sans-serif`,
-  body: `'Oxygen', sans-serif`,
+  heading: `'Open Sans', sans-serif`,
+  body: `'Open Sans', sans-serif`,
   mono: `'Fira Code', monospace`
 }
 
-const theme = extendTheme({ colors, fonts })
+const config = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
+}
+
+const theme = extendTheme({ colors, fonts, config })
 
 ReactDOM.render(
   <React.StrictMode>
